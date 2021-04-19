@@ -1,12 +1,19 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
-
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 
-// start the Stimulus application
-import './bootstrap';
+import React, {Component} from 'react';
+import * as ReactDOM from "react-dom";
+
+class App extends Component {
+    render() {
+        console.log('Start Application by Symfony & ReactJS!')
+        return (
+            <div id="content"></div>
+        );
+    }
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
