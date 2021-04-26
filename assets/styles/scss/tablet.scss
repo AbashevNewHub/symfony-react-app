@@ -1,0 +1,121 @@
+@import "varibles";
+@import "mixins";
+
+@include media-breakpoint-up(md) {
+  /* MAIN */
+
+  header {
+    display: flex;
+    position: relative;
+
+    a.logo {
+      width: 10%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .navbar {
+      width: 75%;
+      height: $header_size;
+      margin-left: 10%;
+      z-index: 1;
+
+    }
+
+    .socLinks {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #000000;
+      position: absolute;
+      height: $header_size;
+      max-height: $header_size;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 15%;
+      padding-right: 1rem;
+
+      a.socItem {
+        font-size: 25px;
+        color: white;
+      }
+    }
+  }
+
+  .masthead {
+
+    .videoStyle {
+      width: 100%;
+      height: auto;
+    }
+
+    .mainInfo {
+      .socLinks {
+        display: none;
+      }
+
+      h1 {
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  header {
+    .navbar {
+      .top-menu, .navbar-nav, .nav-item, .nav-link {
+        height: 100%;
+      }
+
+      .navbar-nav {
+        background: inherit;
+        justify-content: space-around;
+        width: 100%;
+
+        .nav-link {
+          color: #FFFFFF;
+          line-height: 30px;
+
+          &.active.home-link, &:hover, &:focus {
+            background: none;
+          }
+
+          &.active:hover, &.active:focus {
+            background-color: $primary;
+          }
+        }
+      }
+
+      /*
+      .dropdown:hover>.dropdown-menu{
+        display: block;
+      }
+      .dropdown {
+        .dropdown-menu {
+          transition: all 0.5s;
+          overflow: hidden;
+          transform-origin: top center;
+          transform: scale(1,0);
+          display: block;
+        }
+        &:hover {
+          .dropdown-menu {
+            transform: scale(1);
+          }
+        }
+      }
+
+       */
+    }
+  }
+  .masthead {
+
+    .mainInfo {
+      h1 {
+        font-size: 40px;
+        margin-top: 4.5rem;
+      }
+    }
+  }
+}

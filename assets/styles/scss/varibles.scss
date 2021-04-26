@@ -1,0 +1,32 @@
+$primary: #F79D5C;
+$dark: #000000;
+
+$navbar-dark-color:                 #494c4f;
+$navbar-dark-hover-color:           #fff;
+$navbar-dark-active-color:          #fff;
+$navbar-dark-disabled-color:        rgba(#494c4f, .25);
+
+$navbar-toggler-padding-y: .25rem;
+$navbar-toggler-padding-x: .25rem;
+
+$font-family-sans-serif:
+  // Cross-platform generic font family (default user interface font)
+        //system-ui,
+          // Safari for macOS and iOS (San Francisco)
+        //-apple-system,
+          // Chrome < 56 for macOS (San Francisco)
+        //BlinkMacSystemFont,
+          // Windows
+          // Android
+        Roboto,
+          // Basic web fallback
+        "Helvetica Neue", Arial,
+          // Linux
+        "Noto Sans",
+        "Liberation Sans",
+          // Sans serif fallback
+        sans-serif,
+          // Emoji fonts
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$header_size: 46px;

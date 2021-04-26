@@ -1,0 +1,42 @@
+// Override default BT variables:
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1222px,
+        xxl: 1900px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1220px,
+        xxl: 1222px
+);
+@import "scss/varibles";
+//@import "scss/fonts";
+@import "~bootstrap/scss/bootstrap";
+
+/* CUSTOM STYLES */
+//styles
+body {
+  background-color: lightgray; /* NEED REMOVE */
+  margin: 0;
+  padding: 0;
+}
+* {
+  outline: none !important;
+}
+.container, .container-xl {
+  max-width: 1192px !important;
+  &.top-content {
+    padding: 0;
+  }
+}
+
+// import main styles
+@import "scss/mobile";
+@import "scss/tablet";
+@import "scss/desktop";
