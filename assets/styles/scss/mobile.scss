@@ -11,6 +11,7 @@ header {
 
   .navbar {
     padding: 0;
+
     .navbar-toggler {
       position: relative;
       left: 50%;
@@ -19,13 +20,16 @@ header {
       width: 40px;
       height: 40px;
     }
+
     .navbar-toggler > .navbar-toggler-close {
       display: inline-block;
     }
+
     .navbar-toggler.collapsed > .navbar-toggler-close,
     .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
       display: none;
     }
+
     .navbar-toggler-close {
       display: inline-block;
       width: 1.5em;
@@ -36,12 +40,15 @@ header {
       opacity: .5;
       filter: invert(1) grayscale(100%) brightness(200%);
     }
+
     .navbar-nav {
       background-color: #FFFFFF;
+
       .nav-link {
         @include font15weight500();
         padding: 0.6em 1em;
         transition: all 0.3s;
+
         &.active,
         &:hover,
         &:focus {
@@ -49,29 +56,34 @@ header {
           color: #FFFFFF;
         }
       }
+
       .show > .nav-link,
       .active > .nav-link,
-      .nav-link.show, .nav-link.active{
+      .nav-link.show, .nav-link.active {
         background-color: $primary;
         color: #FFFFFF;
       }
+
       .dropdown-menu {
         border: none;
         padding: 0;
         margin: 0;
         border-radius: inherit;
       }
+
       .dropdown-item {
         @include font15weight500();
         color: $navbar-dark-color;
         padding: 0.6em 1.5em;
         transition: all 0.3s;
+
         &:hover,
         &:focus {
           color: #FFFFFF;
           background-color: $primary;
         }
       }
+
       @include media-breakpoint-down(sm) {
         .dropdown-toggle::after {
           margin-left: 0;
@@ -91,6 +103,7 @@ header {
   overflow: hidden;
   position: relative;
   line-height: 0;
+
   .overlay {
     background-color: #000000;
     opacity: 0.5;
@@ -103,11 +116,13 @@ header {
     width: 100%;
     height: 100%;
   }
+
   .videoStyle {
     height: 100%;
     width: auto;
     position: absolute;
   }
+
   .mainInfo {
     position: relative;
     top: 0;
@@ -117,41 +132,57 @@ header {
     width: 100%;
     height: 100%;
     color: #FFFFFF;
-    padding: 3.5rem 0.75rem 4.5rem;
+    padding: 4.5rem 0 5.5rem;
     text-align: center;
+    min-height: 250px;
+
     h1 {
       font-size: 30px;
       line-height: normal;
       text-align: center;
-      font-weight: 600;
-      margin: 2rem auto 1.25rem;
+      margin: 1.5rem auto;
     }
+
     p {
       font-size: 17px;
       margin-bottom: 2rem;
       line-height: normal;
       text-align: center;
     }
+
     a.btn-primary {
       @include font15weight500();
-      margin: 0 auto 1.25rem;
+      margin: 0 auto 2rem;
       width: auto;
       color: white;
       line-height: 1;
       padding: 0.75rem 1.5rem;
     }
+
     .socLinks {
       background-color: #000000;
       padding: 0.5rem;
       position: absolute;
       bottom: 0;
       left: 0;
+
       a.socItem {
         margin: 0.75rem 0.5rem;
         font-size: 25px;
         color: white;
       }
     }
+  }
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  .form-floating > input {
+    height: calc(3.5rem + 2px);
+    padding: 1rem .75rem;
   }
 }
 

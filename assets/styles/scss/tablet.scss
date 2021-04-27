@@ -1,6 +1,7 @@
 @import "varibles";
 @import "mixins";
 
+// ≥768px
 @include media-breakpoint-up(md) {
   /* MAIN */
 
@@ -60,7 +61,7 @@
     }
   }
 }
-
+// ≥992px
 @include media-breakpoint-up(lg) {
   header {
     .navbar {
@@ -79,6 +80,9 @@
 
           &.active.home-link, &:hover, &:focus {
             background: none;
+            &:hover, &:focus {
+              background: none;
+            }
           }
 
           &.active:hover, &.active:focus {
@@ -112,10 +116,13 @@
   .masthead {
 
     .mainInfo {
+      min-height: 350px;
       h1 {
         font-size: 40px;
-        margin-top: 4.5rem;
+        margin-top: 2.5rem;
       }
     }
   }
 }
+
+@import "tablet/backend";

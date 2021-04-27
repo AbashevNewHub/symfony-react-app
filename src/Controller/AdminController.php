@@ -21,6 +21,7 @@ class AdminController extends AbstractController
 
         return $this->render('admin/index.html.twig', [
             'controller_name' => 'AdminController',
+            'title' => 'You - ' . $user->getEmail(),
         ]);
     }
 }

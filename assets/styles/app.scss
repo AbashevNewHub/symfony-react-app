@@ -21,6 +21,9 @@ $container-max-widths: (
 
 /* CUSTOM STYLES */
 //styles
+html {
+  font-size: 15px;
+}
 body {
   background-color: lightgray; /* NEED REMOVE */
   margin: 0;
@@ -34,6 +37,9 @@ body {
   &.top-content {
     padding: 0;
   }
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 600;
 }
 
 // import main styles

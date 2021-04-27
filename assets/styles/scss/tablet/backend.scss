@@ -1,0 +1,32 @@
+@import "../varibles";
+
+//	≥768px
+@include media-breakpoint-up(md) {
+  body.backend {
+
+    header {
+      a.logo {
+        position: relative;
+        height: $header_size;
+        overflow: hidden;
+        background-color: $dark;
+        width: 5%;
+
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      .navbar {
+        margin-left: 0;
+        width: 80%;
+      }
+    }
+  }
+}
+
+//	≥992px
+@include media-breakpoint-up(lg) {
+
+}

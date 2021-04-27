@@ -13,7 +13,7 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="{{ is_granted('IS_AUTHENTICATED_FULLY') ? 'backend' : '' }}">
         <div class="container-xl top-content">
             <header>
                 <a href="/" class="logo">
@@ -22,23 +22,16 @@
                 {% include 'nav.html.twig' %}
                 {% include 'soclinks.html.twig' %}
             </header>
-            <section class="masthead">
-                {% set videoBG = app.request.get('_route') == 'app_homepage' ? 'Website-Video.mp4' : 'Other-Pages-Video.mp4'  %}
-                <video class="videoStyle" autoPlay loop muted>
-                    <source src="{{ asset(videoBG) }}" type='video/mp4'/>
-                </video>
-                <div class="overlay"></div>
-                <div class="mainInfo">
-                    <h1 class="title font-weight-bold">{{ title|default('Your Dream Floor / Our Expert Installation') }}</h1>
-                    {% if app.request.get('_route') == 'app_homepage' %}
-                        <p class="subtitle">Serving Charlotte NC and All Surrounding Area’s</p>
-                        <a class="btn btn-primary" role="button" href="/">Schedule a FREE Estimate</a>
-                        <p>OR</p>
-                        <a class="btn btn-primary" role="button" href="/">Get FREE Samples & Schedule a FREE Estimate</a>
-                    {% endif %}
-                    {% include 'soclinks.html.twig' %}
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <div class="nav-scroller bg-body shadow-sm">
+                    <nav class="nav nav-underline bg-light justify-content-end" aria-label="Secondary navigation">
+                        <a class="nav-link" href="{{ path('app_admin_home') }}">Dashboard</a>
+                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
+                    </nav>
                 </div>
-            </section>
+            {% endif %}
         </div>
         <div class="container-xl">
             {% block body %}{% endblock %}
